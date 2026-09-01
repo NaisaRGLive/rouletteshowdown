@@ -1,1 +1,257 @@
+/* =========================================================
+   RESULTS SCENE
+   ========================================================= */
 
+.results-scene {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   DECORATIVE MOTIF
+   ========================================================= */
+
+.results-motif {
+  position: absolute;
+
+  top: 70px;
+  right: 90px;
+
+  color: var(--motif-color);
+
+  opacity: 0.16;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.results-content {
+  width: min(1180px, 100%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.results-kicker {
+  margin-bottom: 14px;
+
+  color: var(--text-secondary);
+
+  font-size: 22px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.results-winner {
+  margin: 0;
+
+  color: var(--primary);
+
+  font-size: 112px;
+  font-weight: 900;
+
+  line-height: 0.95;
+
+  text-shadow:
+    0 0 24px
+    color-mix(
+      in srgb,
+      var(--primary) 28%,
+      transparent
+    );
+}
+
+
+.results-award {
+  margin-top: 20px;
+
+  font-size: 44px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.results-content .theme-divider {
+  width: 520px;
+
+  margin: 34px 0;
+}
+
+
+/* =========================================================
+   SCOREBOARD
+   ========================================================= */
+
+.results-scoreboard {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 26px 36px;
+}
+
+
+.results-player {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.results-player-name {
+  color: var(--text-primary);
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+
+.results-player-score {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+
+.results-player-one .results-player-score {
+  color: var(--primary);
+}
+
+
+.results-player-two .results-player-score {
+  color: var(--secondary);
+}
+
+
+.results-vs {
+  color: var(--text-soft);
+
+  font-size: 16px;
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   BONUS SUMMARY
+   ========================================================= */
+
+.results-bonuses {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-top: 20px;
+}
+
+
+.results-bonus {
+  display: grid;
+
+  grid-template-columns:
+    46px
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px 20px;
+
+  text-align: left;
+}
+
+
+.results-bonus-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    color-mix(
+      in srgb,
+      currentColor 12%,
+      transparent
+    );
+}
+
+
+.results-bonus-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+
+.results-bonus-title {
+  color: var(--text-primary);
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+.results-bonus-player {
+  margin-top: 3px;
+
+  font-size: 14px;
+}
+
+
+.results-bonus-points {
+  font-size: 22px;
+  font-weight: 900;
+}
