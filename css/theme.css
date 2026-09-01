@@ -1,1 +1,330 @@
 
+/* css/theme.css */
+
+/* =========================================================
+   SHOWDOWN DEFAULT THEME
+   Naisa / Lofi-Tech
+   ========================================================= */
+
+:root {
+
+  /* ---------------------------------------------------------
+     FONT
+     --------------------------------------------------------- */
+
+  --font-main:
+    "Nunito",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+
+  /* ---------------------------------------------------------
+     CORE COLORS
+     --------------------------------------------------------- */
+
+  --primary:
+    #f0a7d8;
+
+  --secondary:
+    #c5a8ff;
+
+  --highlight:
+    #f5d889;
+
+  --tech-accent:
+    #7bd9ec;
+
+  --tech-deep:
+    #324c75;
+
+
+  /* ---------------------------------------------------------
+     BACKGROUNDS
+     --------------------------------------------------------- */
+
+  --background:
+    #10121c;
+
+  --background-soft:
+    #161925;
+
+  --panel-background:
+    #1c2030;
+
+  --panel-background-light:
+    #252a3d;
+
+  --panel-glass:
+    rgba(28, 32, 48, 0.82);
+
+
+  /* ---------------------------------------------------------
+     TEXT
+     --------------------------------------------------------- */
+
+  --text-primary:
+    #fbf8ff;
+
+  --text-secondary:
+    #bbb8ca;
+
+  --text-soft:
+    #8d8a9c;
+
+
+  /* ---------------------------------------------------------
+     BORDERS
+     --------------------------------------------------------- */
+
+  --border-color:
+    rgba(230, 211, 255, 0.18);
+
+  --border-color-strong:
+    rgba(240, 167, 216, 0.42);
+
+  --border-width:
+    2px;
+
+
+  /* ---------------------------------------------------------
+     RADII
+     --------------------------------------------------------- */
+
+  --radius-small:
+    12px;
+
+  --radius-medium:
+    18px;
+
+  --radius-panel:
+    24px;
+
+  --radius-large:
+    32px;
+
+
+  /* ---------------------------------------------------------
+     SHADOWS
+     --------------------------------------------------------- */
+
+  --shadow-panel:
+    0 12px 40px
+    rgba(0, 0, 0, 0.34);
+
+  --shadow-soft:
+    0 8px 28px
+    rgba(0, 0, 0, 0.22);
+
+
+  /* ---------------------------------------------------------
+     GLOWS
+     --------------------------------------------------------- */
+
+  --glow-primary:
+    0 0 28px
+    rgba(240, 167, 216, 0.24);
+
+  --glow-secondary:
+    0 0 28px
+    rgba(197, 168, 255, 0.22);
+
+  --glow-highlight:
+    0 0 26px
+    rgba(245, 216, 137, 0.18);
+
+  --glow-tech:
+    0 0 26px
+    rgba(123, 217, 236, 0.18);
+
+
+  /* ---------------------------------------------------------
+     DECORATION
+     --------------------------------------------------------- */
+
+  --motif-color:
+    var(--secondary);
+
+  --motif-opacity:
+    0.6;
+
+  --motif-size-small:
+    22px;
+
+  --motif-size-medium:
+    34px;
+
+  --motif-size-large:
+    72px;
+
+
+  /* ---------------------------------------------------------
+     ANIMATION SPEEDS
+     --------------------------------------------------------- */
+
+  --transition-fast:
+    160ms;
+
+  --transition-medium:
+    280ms;
+
+  --transition-slow:
+    500ms;
+}
+
+
+/* =========================================================
+   BACKGROUND TREATMENT
+   ========================================================= */
+
+#scene-root {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(240, 167, 216, 0.09),
+      transparent 32%
+    ),
+
+    radial-gradient(
+      circle at 78% 30%,
+      rgba(197, 168, 255, 0.08),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      circle at 70% 85%,
+      rgba(123, 217, 236, 0.05),
+      transparent 28%
+    ),
+
+    var(--background);
+}
+
+
+/* =========================================================
+   OPTIONAL LOFI GRAIN
+   ========================================================= */
+
+#scene-root::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  mix-blend-mode: soft-light;
+}
+
+
+/* =========================================================
+   GENERIC ACCENT ELEMENTS
+   ========================================================= */
+
+.theme-divider {
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--primary),
+      var(--secondary),
+      transparent
+    );
+
+  opacity: 0.75;
+}
+
+.theme-chip {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 8px 14px;
+
+  background:
+    rgba(197, 168, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(197, 168, 255, 0.18);
+
+  border-radius: 999px;
+
+  color: var(--text-secondary);
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   MOTIF ICONS
+   ========================================================= */
+
+.theme-motif {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: var(--motif-color);
+
+  opacity: var(--motif-opacity);
+}
+
+.theme-motif svg {
+  width: 100%;
+  height: 100%;
+
+  stroke-width: 1.8;
+}
+
+.theme-motif.small {
+  width: var(--motif-size-small);
+  height: var(--motif-size-small);
+}
+
+.theme-motif.medium {
+  width: var(--motif-size-medium);
+  height: var(--motif-size-medium);
+}
+
+.theme-motif.large {
+  width: var(--motif-size-large);
+  height: var(--motif-size-large);
+}
+
+
+/* =========================================================
+   STATUS COLORS
+   ========================================================= */
+
+.status-success {
+  color: #8bdca8;
+}
+
+.status-danger {
+  color: #ef8f9c;
+}
+
+.status-warning {
+  color: var(--highlight);
+}
+
+.status-tech {
+  color: var(--tech-accent);
+}
